@@ -1,0 +1,13 @@
+# Target labels
+ PioasmBuild
+# Source files and their labels
+/Users/abhinavsinha/pico/pico-apps/build/examples/ws2812_rgb/CMakeFiles/PioasmBuild
+/Users/abhinavsinha/pico/pico-apps/build/examples/ws2812_rgb/CMakeFiles/PioasmBuild.rule
+/Users/abhinavsinha/pico/pico-apps/build/examples/ws2812_rgb/CMakeFiles/PioasmBuild-complete.rule
+/Users/abhinavsinha/pico/pico-apps/build/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule
+/Users/abhinavsinha/pico/pico-apps/build/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule
+/Users/abhinavsinha/pico/pico-apps/build/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule
+/Users/abhinavsinha/pico/pico-apps/build/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule
+/Users/abhinavsinha/pico/pico-apps/build/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule
+/Users/abhinavsinha/pico/pico-apps/build/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule
+/Users/abhinavsinha/pico/pico-apps/build/examples/ws2812_rgb/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule

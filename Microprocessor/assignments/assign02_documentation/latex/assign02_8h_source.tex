@@ -1,0 +1,72 @@
+\hypertarget{assign02_8h_source}{}\doxysection{assign02.\+h}
+\label{assign02_8h_source}\index{/Users/abhinavsinha/pico/pico-\/apps/assignments/assign02/assign02.h@{/Users/abhinavsinha/pico/pico-\/apps/assignments/assign02/assign02.h}}
+\mbox{\hyperlink{assign02_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef ASSIGN02\_HEADER}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define ASSIGN02\_HEADER}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{comment}{// morse code dictionary : item 0 as the letter in ascii, items 1 -\/ 6 as morse code}}
+\DoxyCodeLine{5 \textcolor{keywordtype}{char} \mbox{\hyperlink{assign02_8h_abe68c98e2158911f429b84e1fae0a66e}{codeDict}}[36][7] = \{}
+\DoxyCodeLine{6     \{\textcolor{charliteral}{'A'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{7     \{\textcolor{charliteral}{'B'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{8     \{\textcolor{charliteral}{'C'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{9     \{\textcolor{charliteral}{'D'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{10     \{\textcolor{charliteral}{'E'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{11     \{\textcolor{charliteral}{'F'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{12     \{\textcolor{charliteral}{'G'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{13     \{\textcolor{charliteral}{'H'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{14     \{\textcolor{charliteral}{'I'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{15     \{\textcolor{charliteral}{'J'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{16     \{\textcolor{charliteral}{'K'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{17     \{\textcolor{charliteral}{'L'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{18     \{\textcolor{charliteral}{'M'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{19     \{\textcolor{charliteral}{'N'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{20     \{\textcolor{charliteral}{'O'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{21     \{\textcolor{charliteral}{'P'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{22     \{\textcolor{charliteral}{'Q'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{23     \{\textcolor{charliteral}{'R'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{24     \{\textcolor{charliteral}{'S'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{25     \{\textcolor{charliteral}{'T'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{26     \{\textcolor{charliteral}{'U'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{27     \{\textcolor{charliteral}{'V'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{28     \{\textcolor{charliteral}{'W'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{29     \{\textcolor{charliteral}{'X'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{30     \{\textcolor{charliteral}{'Y'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{31     \{\textcolor{charliteral}{'Z'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{32     \{\textcolor{charliteral}{'1'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{33     \{\textcolor{charliteral}{'2'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{34     \{\textcolor{charliteral}{'3'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{35     \{\textcolor{charliteral}{'4'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{36     \{\textcolor{charliteral}{'5'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{37     \{\textcolor{charliteral}{'6'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{38     \{\textcolor{charliteral}{'7'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{39     \{\textcolor{charliteral}{'8'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{40     \{\textcolor{charliteral}{'9'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'.'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{41     \{\textcolor{charliteral}{'0'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'-\/'}, \textcolor{charliteral}{'\(\backslash\)0'}\},}
+\DoxyCodeLine{42 \};}
+\DoxyCodeLine{43 \textcolor{keywordtype}{char} \mbox{\hyperlink{assign02_8h_acdc00f89530f451de216013ed9c9fda0}{wordDict}}[16][4] = \{}
+\DoxyCodeLine{44     \{\textcolor{stringliteral}{"{}CAT\(\backslash\)0"{}}\},}
+\DoxyCodeLine{45     \{\textcolor{stringliteral}{"{}DOG\(\backslash\)0"{}}\},}
+\DoxyCodeLine{46     \{\textcolor{stringliteral}{"{}ANT\(\backslash\)0"{}}\},}
+\DoxyCodeLine{47     \{\textcolor{stringliteral}{"{}LEG\(\backslash\)0"{}}\},}
+\DoxyCodeLine{48     \{\textcolor{stringliteral}{"{}EAR\(\backslash\)0"{}}\},}
+\DoxyCodeLine{49     \{\textcolor{stringliteral}{"{}CAR\(\backslash\)0"{}}\},}
+\DoxyCodeLine{50     \{\textcolor{stringliteral}{"{}GAS\(\backslash\)0"{}}\},}
+\DoxyCodeLine{51     \{\textcolor{stringliteral}{"{}DAY\(\backslash\)0"{}}\},}
+\DoxyCodeLine{52     \{\textcolor{stringliteral}{"{}FOX\(\backslash\)0"{}}\},}
+\DoxyCodeLine{53     \{\textcolor{stringliteral}{"{}RED\(\backslash\)0"{}}\},}
+\DoxyCodeLine{54     \{\textcolor{stringliteral}{"{}VAN\(\backslash\)0"{}}\},}
+\DoxyCodeLine{55     \{\textcolor{stringliteral}{"{}BOY\(\backslash\)0"{}}\},}
+\DoxyCodeLine{56     \{\textcolor{stringliteral}{"{}HIT\(\backslash\)0"{}}\},}
+\DoxyCodeLine{57     \{\textcolor{stringliteral}{"{}JAM\(\backslash\)0"{}}\},}
+\DoxyCodeLine{58     \{\textcolor{stringliteral}{"{}ZIP\(\backslash\)0"{}}\},}
+\DoxyCodeLine{59     \{\textcolor{stringliteral}{"{}SEQ\(\backslash\)0"{}}\}\};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{comment}{// Predeclaration of the functions needed in assign02.c}}
+\DoxyCodeLine{62 \textcolor{keywordtype}{void} \mbox{\hyperlink{assign02_8h_a791121bfaeeeb2cec7d447d01fb82c10}{main\_asm}}();}
+\DoxyCodeLine{63 \textcolor{keywordtype}{void} \mbox{\hyperlink{assign02_8h_a329b748919954f8b48c58049115a5c54}{watchdog\_update}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{64 \textcolor{keywordtype}{void} \mbox{\hyperlink{assign02_8h_a87042933bd6c335c21131991c83c161d}{watchdog\_enable}}(uint32\_t delay\_ms, \textcolor{keywordtype}{bool} pause\_on\_debug);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

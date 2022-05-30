@@ -1,0 +1,102 @@
+\hypertarget{lab07_8c}{}\doxysection{/\+Users/abhinavsinha/pico/pico-\/apps/labs/lab07/lab07.c File Reference}
+\label{lab07_8c}\index{/Users/abhinavsinha/pico/pico-\/apps/labs/lab07/lab07.c@{/Users/abhinavsinha/pico/pico-\/apps/labs/lab07/lab07.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}pico/stdlib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico/float.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico/double.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico/multicore.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lab07_8c_a9f153132b8b4afad133b952111e18bd9}{core1\+\_\+entry}} ()
+\begin{DoxyCompactList}\small\item\em This function acts as the main entry-\/point for core \#1. A function pointer is passed in via the FIFO with one incoming int32\+\_\+t used as a parameter. The function will provide an int32\+\_\+t return value by pushing it back on the FIFO, which also indicates that the result is ready. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{lab07_8c_a7d057526e6aabf0c28123e9f672d26c8}{pi\+\_\+calculator\+\_\+double\+\_\+precision}} (int NUM\+\_\+\+ITERATIONS)
+\begin{DoxyCompactList}\small\item\em Pi calculator using wallis algorithm which gives a higher precision. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{lab07_8c_a625dabc978d7c7e59c655c9a62318c16}{pi\+\_\+calculator\+\_\+single\+\_\+precision}} (int NUM\+\_\+\+ITERATIONS)
+\begin{DoxyCompactList}\small\item\em Pi calculator using wallis algorithm which gives lower precision. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{lab07_8c_aba8018fcdae9a16309725431e373bc4b}{get\+\_\+xip\+\_\+cache\+\_\+en}} ()
+\begin{DoxyCompactList}\small\item\em Getting the current status of XIP cache. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{lab07_8c_aeb03fae7181f60476e79cecf2a6b8e35}{set\+\_\+xip\+\_\+cache\+\_\+en}} (bool cache\+\_\+en)
+\begin{DoxyCompactList}\small\item\em Setting the enable/disable of XIP cache. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{lab07_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Pi calculator using wallis algorithm which gives lower precision. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lab07_8c_a9f153132b8b4afad133b952111e18bd9}\label{lab07_8c_a9f153132b8b4afad133b952111e18bd9}} 
+\index{lab07.c@{lab07.c}!core1\_entry@{core1\_entry}}
+\index{core1\_entry@{core1\_entry}!lab07.c@{lab07.c}}
+\doxysubsubsection{\texorpdfstring{core1\_entry()}{core1\_entry()}}
+{\footnotesize\ttfamily void core1\+\_\+entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This function acts as the main entry-\/point for core \#1. A function pointer is passed in via the FIFO with one incoming int32\+\_\+t used as a parameter. The function will provide an int32\+\_\+t return value by pushing it back on the FIFO, which also indicates that the result is ready. 
+
+\mbox{\Hypertarget{lab07_8c_aba8018fcdae9a16309725431e373bc4b}\label{lab07_8c_aba8018fcdae9a16309725431e373bc4b}} 
+\index{lab07.c@{lab07.c}!get\_xip\_cache\_en@{get\_xip\_cache\_en}}
+\index{get\_xip\_cache\_en@{get\_xip\_cache\_en}!lab07.c@{lab07.c}}
+\doxysubsubsection{\texorpdfstring{get\_xip\_cache\_en()}{get\_xip\_cache\_en()}}
+{\footnotesize\ttfamily bool get\+\_\+xip\+\_\+cache\+\_\+en (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Getting the current status of XIP cache. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ The bit present at the XIP cache controller. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lab07_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{lab07_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{lab07.c@{lab07.c}!main@{main}}
+\index{main@{main}!lab07.c@{lab07.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pi calculator using wallis algorithm which gives lower precision. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ Value of wallis algorithm. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lab07_8c_a7d057526e6aabf0c28123e9f672d26c8}\label{lab07_8c_a7d057526e6aabf0c28123e9f672d26c8}} 
+\index{lab07.c@{lab07.c}!pi\_calculator\_double\_precision@{pi\_calculator\_double\_precision}}
+\index{pi\_calculator\_double\_precision@{pi\_calculator\_double\_precision}!lab07.c@{lab07.c}}
+\doxysubsubsection{\texorpdfstring{pi\_calculator\_double\_precision()}{pi\_calculator\_double\_precision()}}
+{\footnotesize\ttfamily double pi\+\_\+calculator\+\_\+double\+\_\+precision (\begin{DoxyParamCaption}\item[{int}]{NUM\+\_\+\+ITERATIONS }\end{DoxyParamCaption})}
+
+
+
+Pi calculator using wallis algorithm which gives a higher precision. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ Value of wallis algorithm. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lab07_8c_a625dabc978d7c7e59c655c9a62318c16}\label{lab07_8c_a625dabc978d7c7e59c655c9a62318c16}} 
+\index{lab07.c@{lab07.c}!pi\_calculator\_single\_precision@{pi\_calculator\_single\_precision}}
+\index{pi\_calculator\_single\_precision@{pi\_calculator\_single\_precision}!lab07.c@{lab07.c}}
+\doxysubsubsection{\texorpdfstring{pi\_calculator\_single\_precision()}{pi\_calculator\_single\_precision()}}
+{\footnotesize\ttfamily float pi\+\_\+calculator\+\_\+single\+\_\+precision (\begin{DoxyParamCaption}\item[{int}]{NUM\+\_\+\+ITERATIONS }\end{DoxyParamCaption})}
+
+
+
+Pi calculator using wallis algorithm which gives lower precision. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ Value of wallis algorithm. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lab07_8c_aeb03fae7181f60476e79cecf2a6b8e35}\label{lab07_8c_aeb03fae7181f60476e79cecf2a6b8e35}} 
+\index{lab07.c@{lab07.c}!set\_xip\_cache\_en@{set\_xip\_cache\_en}}
+\index{set\_xip\_cache\_en@{set\_xip\_cache\_en}!lab07.c@{lab07.c}}
+\doxysubsubsection{\texorpdfstring{set\_xip\_cache\_en()}{set\_xip\_cache\_en()}}
+{\footnotesize\ttfamily bool set\+\_\+xip\+\_\+cache\+\_\+en (\begin{DoxyParamCaption}\item[{bool}]{cache\+\_\+en }\end{DoxyParamCaption})}
+
+
+
+Setting the enable/disable of XIP cache. 
+
+\begin{DoxyReturn}{Returns}
+bool -\/ Return 0 for successful change in the XIP control base to either enable or disable the cache. 
+\end{DoxyReturn}

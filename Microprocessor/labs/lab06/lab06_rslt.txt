@@ -1,0 +1,8 @@
+Single Precision for Single Core: 1
+Double Precision for Single Core: 2
+Total execution for sequential execution: 12
+Single Precision for Multi-Core: 394543
+Double Precision for Multi-Core: 778483
+Time Taken for Total Multi-Core: 7784795
+
+The returned value varies for whichever function undergoes the operatin in multi-core. 

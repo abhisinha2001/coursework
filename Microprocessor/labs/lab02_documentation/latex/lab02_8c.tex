@@ -1,0 +1,102 @@
+\hypertarget{lab02_8c}{}\doxysection{/\+Users/abhinavsinha/pico/pico-\/apps/labs/lab02/lab02.c File Reference}
+\label{lab02_8c}\index{/Users/abhinavsinha/pico/pico-\/apps/labs/lab02/lab02.c@{/Users/abhinavsinha/pico/pico-\/apps/labs/lab02/lab02.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}pico/float.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico/double.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{lab02_8c_a0f3187ba8f013b05a8df7446f1ecf5f0}{my\+\_\+pi}}~3.\+14159265359
+\begin{DoxyCompactList}\small\item\em Given pi constant to be used for error calculation. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{lab02_8c_ab3be0641eb76161a48ed528e6eea2ac3}{NUM\+\_\+\+ITERATIONS}}~100000
+\begin{DoxyCompactList}\small\item\em Given number of iterations that the loop needs to be run for for given precision. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{lab02_8c_ac588073c439e598cab88dad7da16b111}{calculate\+\_\+error}} (double value)
+\begin{DoxyCompactList}\small\item\em Error calculation function -\/ calculates the percentage(\%) error for the calculated value of pi. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{lab02_8c_a5d6100544a889b8a0bfd4a8a17bedd24}{pi\+\_\+calculator\+\_\+double\+\_\+precision}} ()
+\begin{DoxyCompactList}\small\item\em Pi calculator using wallis algorithm which gives a higher precision. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{lab02_8c_a32638d57e4ce61aff83c263e304904fc}{pi\+\_\+calculator\+\_\+single\+\_\+precision}} ()
+\begin{DoxyCompactList}\small\item\em Pi calculator using wallis algorithm which gives lower precision. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{lab02_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Main function -\/ Runs the program and calls the helping functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{lab02_8c_a0f3187ba8f013b05a8df7446f1ecf5f0}\label{lab02_8c_a0f3187ba8f013b05a8df7446f1ecf5f0}} 
+\index{lab02.c@{lab02.c}!my\_pi@{my\_pi}}
+\index{my\_pi@{my\_pi}!lab02.c@{lab02.c}}
+\doxysubsubsection{\texorpdfstring{my\_pi}{my\_pi}}
+{\footnotesize\ttfamily \#define my\+\_\+pi~3.\+14159265359}
+
+
+
+Given pi constant to be used for error calculation. 
+
+\mbox{\Hypertarget{lab02_8c_ab3be0641eb76161a48ed528e6eea2ac3}\label{lab02_8c_ab3be0641eb76161a48ed528e6eea2ac3}} 
+\index{lab02.c@{lab02.c}!NUM\_ITERATIONS@{NUM\_ITERATIONS}}
+\index{NUM\_ITERATIONS@{NUM\_ITERATIONS}!lab02.c@{lab02.c}}
+\doxysubsubsection{\texorpdfstring{NUM\_ITERATIONS}{NUM\_ITERATIONS}}
+{\footnotesize\ttfamily \#define NUM\+\_\+\+ITERATIONS~100000}
+
+
+
+Given number of iterations that the loop needs to be run for for given precision. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lab02_8c_ac588073c439e598cab88dad7da16b111}\label{lab02_8c_ac588073c439e598cab88dad7da16b111}} 
+\index{lab02.c@{lab02.c}!calculate\_error@{calculate\_error}}
+\index{calculate\_error@{calculate\_error}!lab02.c@{lab02.c}}
+\doxysubsubsection{\texorpdfstring{calculate\_error()}{calculate\_error()}}
+{\footnotesize\ttfamily double calculate\+\_\+error (\begin{DoxyParamCaption}\item[{double}]{value }\end{DoxyParamCaption})}
+
+
+
+Error calculation function -\/ calculates the percentage(\%) error for the calculated value of pi. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ Value of error of pi. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lab02_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{lab02_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{lab02.c@{lab02.c}!main@{main}}
+\index{main@{main}!lab02.c@{lab02.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function -\/ Runs the program and calls the helping functions. 
+
+\begin{DoxyReturn}{Returns}
+int -\/ 0 if the program runs succesfully. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lab02_8c_a5d6100544a889b8a0bfd4a8a17bedd24}\label{lab02_8c_a5d6100544a889b8a0bfd4a8a17bedd24}} 
+\index{lab02.c@{lab02.c}!pi\_calculator\_double\_precision@{pi\_calculator\_double\_precision}}
+\index{pi\_calculator\_double\_precision@{pi\_calculator\_double\_precision}!lab02.c@{lab02.c}}
+\doxysubsubsection{\texorpdfstring{pi\_calculator\_double\_precision()}{pi\_calculator\_double\_precision()}}
+{\footnotesize\ttfamily double pi\+\_\+calculator\+\_\+double\+\_\+precision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pi calculator using wallis algorithm which gives a higher precision. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ Value of wallis algorithm. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lab02_8c_a32638d57e4ce61aff83c263e304904fc}\label{lab02_8c_a32638d57e4ce61aff83c263e304904fc}} 
+\index{lab02.c@{lab02.c}!pi\_calculator\_single\_precision@{pi\_calculator\_single\_precision}}
+\index{pi\_calculator\_single\_precision@{pi\_calculator\_single\_precision}!lab02.c@{lab02.c}}
+\doxysubsubsection{\texorpdfstring{pi\_calculator\_single\_precision()}{pi\_calculator\_single\_precision()}}
+{\footnotesize\ttfamily float pi\+\_\+calculator\+\_\+single\+\_\+precision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pi calculator using wallis algorithm which gives lower precision. 
+
+\begin{DoxyReturn}{Returns}
+double -\/ Value of wallis algorithm. 
+\end{DoxyReturn}

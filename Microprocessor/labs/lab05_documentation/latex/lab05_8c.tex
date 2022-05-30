@@ -1,0 +1,107 @@
+\hypertarget{lab05_8c}{}\doxysection{/\+Users/abhinavsinha/pico/pico-\/apps/labs/lab05/lab05.c File Reference}
+\label{lab05_8c}\index{/Users/abhinavsinha/pico/pico-\/apps/labs/lab05/lab05.c@{/Users/abhinavsinha/pico/pico-\/apps/labs/lab05/lab05.c}}
+{\ttfamily \#include \char`\"{}hardware/gpio.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lab05_8c_a791121bfaeeeb2cec7d447d01fb82c10}{main\+\_\+asm}} ()
+\item 
+void \mbox{\hyperlink{lab05_8c_ac500ed05208af5d94f1133262f056d21}{asm\+\_\+gpio\+\_\+init}} (int pin)
+\begin{DoxyCompactList}\small\item\em Wrapper to allow the assembly code to call the gpio\+\_\+init() SDK function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lab05_8c_af21ffc26738f42c133825b77354e19e0}{asm\+\_\+gpio\+\_\+set\+\_\+dir}} (int pin, int dir)
+\begin{DoxyCompactList}\small\item\em Wrapper to allow the assembly code to call the gpio\+\_\+set\+\_\+dir() SDK function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{lab05_8c_afdce0a5698426e8cecbb349d8d5a6c15}{asm\+\_\+gpio\+\_\+get}} (int pin)
+\begin{DoxyCompactList}\small\item\em Wrapper to allow the assembly code to call the gpio\+\_\+get() SDK function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lab05_8c_a28d880ca6f371eb036617982b68a9d64}{asm\+\_\+gpio\+\_\+put}} (int pin, int value)
+\begin{DoxyCompactList}\small\item\em Wrapper to allow the assembly code to call the gpio\+\_\+put() SDK function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{lab05_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em EXAMPLE -\/ BLINK\+\_\+\+ASM Simple example that uses assembly code to initialise the built-\/in LED on Raspberry Pi Pico and then flash it forever using a sleep routine to set the period of the flash. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lab05_8c_afdce0a5698426e8cecbb349d8d5a6c15}\label{lab05_8c_afdce0a5698426e8cecbb349d8d5a6c15}} 
+\index{lab05.c@{lab05.c}!asm\_gpio\_get@{asm\_gpio\_get}}
+\index{asm\_gpio\_get@{asm\_gpio\_get}!lab05.c@{lab05.c}}
+\doxysubsubsection{\texorpdfstring{asm\_gpio\_get()}{asm\_gpio\_get()}}
+{\footnotesize\ttfamily int asm\+\_\+gpio\+\_\+get (\begin{DoxyParamCaption}\item[{int}]{pin }\end{DoxyParamCaption})}
+
+
+
+Wrapper to allow the assembly code to call the gpio\+\_\+get() SDK function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The GPIO pin number to read from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Returns the current value of the GPIO pin. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lab05_8c_ac500ed05208af5d94f1133262f056d21}\label{lab05_8c_ac500ed05208af5d94f1133262f056d21}} 
+\index{lab05.c@{lab05.c}!asm\_gpio\_init@{asm\_gpio\_init}}
+\index{asm\_gpio\_init@{asm\_gpio\_init}!lab05.c@{lab05.c}}
+\doxysubsubsection{\texorpdfstring{asm\_gpio\_init()}{asm\_gpio\_init()}}
+{\footnotesize\ttfamily void asm\+\_\+gpio\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{pin }\end{DoxyParamCaption})}
+
+
+
+Wrapper to allow the assembly code to call the gpio\+\_\+init() SDK function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The GPIO pin number to initialise. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lab05_8c_a28d880ca6f371eb036617982b68a9d64}\label{lab05_8c_a28d880ca6f371eb036617982b68a9d64}} 
+\index{lab05.c@{lab05.c}!asm\_gpio\_put@{asm\_gpio\_put}}
+\index{asm\_gpio\_put@{asm\_gpio\_put}!lab05.c@{lab05.c}}
+\doxysubsubsection{\texorpdfstring{asm\_gpio\_put()}{asm\_gpio\_put()}}
+{\footnotesize\ttfamily void asm\+\_\+gpio\+\_\+put (\begin{DoxyParamCaption}\item[{int}]{pin,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+
+
+Wrapper to allow the assembly code to call the gpio\+\_\+put() SDK function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The GPIO pin number to write to. \\
+\hline
+{\em value} & Specify the value that the pin should be set to (0/1). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lab05_8c_af21ffc26738f42c133825b77354e19e0}\label{lab05_8c_af21ffc26738f42c133825b77354e19e0}} 
+\index{lab05.c@{lab05.c}!asm\_gpio\_set\_dir@{asm\_gpio\_set\_dir}}
+\index{asm\_gpio\_set\_dir@{asm\_gpio\_set\_dir}!lab05.c@{lab05.c}}
+\doxysubsubsection{\texorpdfstring{asm\_gpio\_set\_dir()}{asm\_gpio\_set\_dir()}}
+{\footnotesize\ttfamily void asm\+\_\+gpio\+\_\+set\+\_\+dir (\begin{DoxyParamCaption}\item[{int}]{pin,  }\item[{int}]{dir }\end{DoxyParamCaption})}
+
+
+
+Wrapper to allow the assembly code to call the gpio\+\_\+set\+\_\+dir() SDK function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & The GPIO pin number of which to set the direction. \\
+\hline
+{\em dir} & Specify the direction that the pin should be set to (0=input/1=output). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{lab05_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{lab05_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{lab05.c@{lab05.c}!main@{main}}
+\index{main@{main}!lab05.c@{lab05.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+EXAMPLE -\/ BLINK\+\_\+\+ASM Simple example that uses assembly code to initialise the built-\/in LED on Raspberry Pi Pico and then flash it forever using a sleep routine to set the period of the flash. 
+
+\begin{DoxyReturn}{Returns}
+int Returns exit-\/status zero on completion. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{lab05_8c_a791121bfaeeeb2cec7d447d01fb82c10}\label{lab05_8c_a791121bfaeeeb2cec7d447d01fb82c10}} 
+\index{lab05.c@{lab05.c}!main\_asm@{main\_asm}}
+\index{main\_asm@{main\_asm}!lab05.c@{lab05.c}}
+\doxysubsubsection{\texorpdfstring{main\_asm()}{main\_asm()}}
+{\footnotesize\ttfamily void main\+\_\+asm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+

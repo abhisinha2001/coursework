@@ -1,0 +1,40 @@
+\hypertarget{lab01_8c_source}{}\doxysection{lab01.\+c}
+\label{lab01_8c_source}\index{/Users/abhinavsinha/pico/pico-\/apps/labs/lab01/lab01.c@{/Users/abhinavsinha/pico/pico-\/apps/labs/lab01/lab01.c}}
+\mbox{\hyperlink{lab01_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00001}00001 \textcolor{preprocessor}{\#include "{}pico/stdlib.h"{}}}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00012}00012 \textcolor{comment}{// subroutine / function which accepts the required parameters (led\_pin,led\_delay) and performs the LED switching operation}}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00013}\mbox{\hyperlink{lab01_8c_a9cc31d8d0fa11b2ec23637c393d91f9e}{00013}} \textcolor{keywordtype}{void} \mbox{\hyperlink{lab01_8c_a9cc31d8d0fa11b2ec23637c393d91f9e}{subroutine}}(uint led\_pin, uint led\_delay)}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00014}00014 \{}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00015}00015     \textcolor{keywordflow}{while} (\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00016}00016     \{}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00017}00017         gpio\_put(led\_pin, 1);}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00018}00018         sleep\_ms(led\_delay);}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00020}00020         \textcolor{comment}{// Toggle the LED off and then sleep for delay period}}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00021}00021         gpio\_put(led\_pin, 0);}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00022}00022         sleep\_ms(led\_delay);}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00023}00023         \textcolor{comment}{// subroutine(led\_pin, led\_delay);}}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00024}00024     \}}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00025}00025 \}}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00027}00027 \textcolor{comment}{// Main function to call and perform the initialization of LED\_PIN and LED\_DELAY}}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00028}\mbox{\hyperlink{lab01_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{00028}} \textcolor{keywordtype}{int} \mbox{\hyperlink{lab01_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00029}00029 \{}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00031}00031     \textcolor{comment}{// Specify the PIN number and sleep delay}}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00032}00032     \textcolor{keyword}{const} uint LED\_PIN = 25;}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00033}00033     \textcolor{keyword}{const} uint LED\_DELAY = 500;}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00035}00035     \textcolor{comment}{// Setup the LED pin as an output.}}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00036}00036     gpio\_init(LED\_PIN);}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00037}00037     gpio\_set\_dir(LED\_PIN, GPIO\_OUT);}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00039}00039     \textcolor{comment}{// Do forever...}}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00040}00040     \mbox{\hyperlink{lab01_8c_a9cc31d8d0fa11b2ec23637c393d91f9e}{subroutine}}(LED\_PIN, LED\_DELAY);}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00041}00041     \textcolor{comment}{// Should never get here due to infinite while-\/loop.}}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00042}00042     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{lab01_8c_source_l00043}00043 \}}
+
+\end{DoxyCode}

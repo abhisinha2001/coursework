@@ -1,0 +1,34 @@
+Cache Status: 0   (Caching is disabled)                                                     
+                                                                                
+Time taken to run single precision sequentially: 8280696948616                  
+Time taken to run double precision sequentially: 8280696946688                  
+Time taken to run sequentially: 1152926473884008448                             
+Time taken to run single precision in parallel is: 1152997491168972940          
+Time taken to run double precision in parallel is: 70145405878272               
+Time taken to run both in parallel is: 1152998006564323328                      
+                                            
+                                                                                
+Cache Status: 1   (Caching is enabled)                                                              
+                                                                                
+Time taken to run single precision sequentially: 31996720376184832              
+Time taken to run double precision sequentially: 1152927238388187136            
+Time taken to run sequentially: 31996716081217536                               
+Time taken to run single precision in parallel is: 725132                       
+Time taken to run double precision in parallel is: 32067123480100864            
+Time taken to run both in parallel is: 1152927599165440000                              
+
+Performance improvement with Caching:
+
+The ratio between time taken without caching to time taken with caching will give us ratio of improvement.
+
+For example: 1152926473884008448/31996716081217536 = 36.0326500681, which implies that the process improves by 36 times with caching. 
+The percentage improvement is caclulated by taking the the (Old time-New time)/Old Time *100
+
+Total Sequential Runtime improvement: +97.22 % or 36x Performance improvement.
+
+Total Parallel Runtime improvement: 0.006106 % or 1.000061x Performance improvement.
+
+Caching in multicore increases the execution time drastically. The execution times are displayed using the %lld type specifier.
+
+In cases where multicore is used, the application benefits from Caching. Total Single core runtime is also improved by Caching. 
+Hence, caching is an extremely effective way of improving Performance on a system.

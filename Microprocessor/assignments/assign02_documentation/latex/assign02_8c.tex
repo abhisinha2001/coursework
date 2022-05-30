@@ -1,0 +1,467 @@
+\hypertarget{assign02_8c}{}\doxysection{/\+Users/abhinavsinha/pico/pico-\/apps/assignments/assign02/assign02.c File Reference}
+\label{assign02_8c}\index{/Users/abhinavsinha/pico/pico-\/apps/assignments/assign02/assign02.c@{/Users/abhinavsinha/pico/pico-\/apps/assignments/assign02/assign02.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}pico/stdlib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hardware/gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pico/multicore.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}assign02.\+pio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}assign02.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hardware/structs/watchdog.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{assign02_8c_a493b9b7cc0c4de9e5d832a5b9c8fe0f0}{IS\+\_\+\+RGBW}}~true
+\begin{DoxyCompactList}\small\item\em Will use RGBW format. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{assign02_8c_a893011783fefc21f30baf08142cd3c35}{NUM\+\_\+\+PIXELS}}~1
+\begin{DoxyCompactList}\small\item\em There is 1 WS2812 device in the chain. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{assign02_8c_af75dc8bf5891f41c539ef9b8ebd3d1c3}{WS2812\+\_\+\+PIN}}~28
+\begin{DoxyCompactList}\small\item\em The GPIO pin that the WS2812 connected to. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{assign02_8c_a2ae745b837daccfde599878d9e87f75b}{asm\+\_\+gpio\+\_\+init}} (uint pin)
+\begin{DoxyCompactList}\small\item\em Initialise a GPIO pin – see SDK for detail on gpio\+\_\+init() \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{assign02_8c_a30af7c9d96d0e068f2f24bfb182bcdf5}{asm\+\_\+gpio\+\_\+set\+\_\+dir}} (uint pin, bool out)
+\begin{DoxyCompactList}\small\item\em Set direction of a GPIO pin – see SDK for detail on gpio\+\_\+set\+\_\+dir() \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{assign02_8c_a891b0282d285011cb337f7e26a529981}{asm\+\_\+gpio\+\_\+get}} (uint pin)
+\begin{DoxyCompactList}\small\item\em Get the value of a GPIO pin – see SDK for detail on gpio\+\_\+get() \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{assign02_8c_a9f03814beac6af4dc59e52c0212d19df}{asm\+\_\+gpio\+\_\+put}} (uint pin, bool value)
+\begin{DoxyCompactList}\small\item\em Set the value of a GPIO pin – see SDK for detail on gpio\+\_\+put() \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{assign02_8c_aa64ec553a105b1c63a4e94bef7397873}{asm\+\_\+gpio\+\_\+set\+\_\+irq}} (uint pin)
+\begin{DoxyCompactList}\small\item\em Enable falling-\/edge interrupt – see SDK for detail on gpio\+\_\+set\+\_\+irq\+\_\+enabled() TODO change this, right now it resembles the behaviour of GPIO\+\_\+\+IRQ\+\_\+\+HIGH. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{assign02_8c_a9f153132b8b4afad133b952111e18bd9}{core1\+\_\+entry}} ()
+\begin{DoxyCompactList}\small\item\em set up code to run on core 1 \end{DoxyCompactList}\item 
+int $\ast$ \mbox{\hyperlink{assign02_8c_aae233a3259047179cf6b672119117bb2}{get\+\_\+bits}} (int buffer, int \mbox{\hyperlink{assign02_8c_a429313a357883005bafd05405df85e4e}{number\+\_\+of\+\_\+bits}})
+\begin{DoxyCompactList}\small\item\em This function return the bits pointer and enables other parts of code to read the buffer information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{assign02_8c_aff4bc17c602603d120756f52e18ebb96}{clearscreen}} ()
+\begin{DoxyCompactList}\small\item\em Function to clear the console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{assign02_8c_a45bca1ee5f91227778d6352e48d6719a}{reset\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Resets the current word buffer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{assign02_8c_a677c57d98f0377cde54889e02d24bfa6}{check\+\_\+morse}} (int index)
+\begin{DoxyCompactList}\small\item\em check if the code stored in the buffer matches the code of the letter in the index \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{assign02_8c_ae59543400d4fd239731ff4d437524270}{search\+\_\+morse}} ()
+\begin{DoxyCompactList}\small\item\em Return the letter corresponding to the letter, else return ? \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{assign02_8c_a1983a60de73d6fac301ace1f66a7f303}{wait\+For\+Space}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the input is a space or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{assign02_8c_aa859b5c3d16fe1bed1d894ed26c63337}{welcome\+Message}} ()
+\begin{DoxyCompactList}\small\item\em welcome banner with group number and instructions \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{assign02_8c_a3d1a578e3c15224826e074685edbc7b4}{print\+Current\+Level}} (int level, int random\+Index, int score, int \mbox{\hyperlink{assign02_8c_ac1d68ef9a5dd304c5015e07af7f2bb19}{lives}})
+\begin{DoxyCompactList}\small\item\em function for each level printing output based on the user input \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{assign02_8c_aa98bf2bd02fee944e7c7b479bdf575e6}{count\+Down}} (int level, int random\+Index, int score, int \mbox{\hyperlink{assign02_8c_ac1d68ef9a5dd304c5015e07af7f2bb19}{lives}})
+\begin{DoxyCompactList}\small\item\em printing a count down to let the player know that the game is about to begin \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{assign02_8c_a1a6c77c32d7eaef6177f10a092bd5620}{return\+Input}} ()
+\begin{DoxyCompactList}\small\item\em funtion to reset the buffer and printing the output \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{assign02_8c_a8350519dbc9cd0d6345b02d09ffe4f14}{task1}} ()
+\begin{DoxyCompactList}\small\item\em implementation of task 1 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{assign02_8c_ac06840b5fb606b0965b4760d28b82094}{task2}} ()
+\begin{DoxyCompactList}\small\item\em implementation of task 2 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{assign02_8c_a3ae77238e329315921c679958019a26b}{task3}} ()
+\begin{DoxyCompactList}\small\item\em implementation of task 3 \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{assign02_8c_a599e67c9615b716b048e98f6ac94f389}{task4}} ()
+\begin{DoxyCompactList}\small\item\em implementation of task 4 \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{assign02_8c_a3d8246759a5fa01c68f943a14b07a5ef}{core\+\_\+1\+\_\+process}} (int32\+\_\+t fico)
+\begin{DoxyCompactList}\small\item\em Multicore function that runs the main program on the additional core. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{assign02_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{assign02_8c_a7f8c6ea9f5ed02326c2c091af3b225bf}{button\+\_\+buffer}}
+\item 
+int \mbox{\hyperlink{assign02_8c_a429313a357883005bafd05405df85e4e}{number\+\_\+of\+\_\+bits}}
+\begin{DoxyCompactList}\small\item\em shared variable between asm and c code, stores the morse code buffer \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{assign02_8c_ab44b37af4091430e7966b7087b2350b8}{is\+Space}}
+\begin{DoxyCompactList}\small\item\em shared variable between asm and c code, stores the number of bits in the buffer \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{assign02_8c_a034b3633bcf9859f3fb6b7ab7a334f6e}{prev}}
+\item 
+int \mbox{\hyperlink{assign02_8c_ac1d68ef9a5dd304c5015e07af7f2bb19}{lives}}
+\begin{DoxyCompactList}\small\item\em Store the previous state of button\+\_\+buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{assign02_8c_a493b9b7cc0c4de9e5d832a5b9c8fe0f0}\label{assign02_8c_a493b9b7cc0c4de9e5d832a5b9c8fe0f0}} 
+\index{assign02.c@{assign02.c}!IS\_RGBW@{IS\_RGBW}}
+\index{IS\_RGBW@{IS\_RGBW}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{IS\_RGBW}{IS\_RGBW}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RGBW~true}
+
+
+
+Will use RGBW format. 
+
+\mbox{\Hypertarget{assign02_8c_a893011783fefc21f30baf08142cd3c35}\label{assign02_8c_a893011783fefc21f30baf08142cd3c35}} 
+\index{assign02.c@{assign02.c}!NUM\_PIXELS@{NUM\_PIXELS}}
+\index{NUM\_PIXELS@{NUM\_PIXELS}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{NUM\_PIXELS}{NUM\_PIXELS}}
+{\footnotesize\ttfamily \#define NUM\+\_\+\+PIXELS~1}
+
+
+
+There is 1 WS2812 device in the chain. 
+
+\mbox{\Hypertarget{assign02_8c_af75dc8bf5891f41c539ef9b8ebd3d1c3}\label{assign02_8c_af75dc8bf5891f41c539ef9b8ebd3d1c3}} 
+\index{assign02.c@{assign02.c}!WS2812\_PIN@{WS2812\_PIN}}
+\index{WS2812\_PIN@{WS2812\_PIN}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{WS2812\_PIN}{WS2812\_PIN}}
+{\footnotesize\ttfamily \#define WS2812\+\_\+\+PIN~28}
+
+
+
+The GPIO pin that the WS2812 connected to. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{assign02_8c_a891b0282d285011cb337f7e26a529981}\label{assign02_8c_a891b0282d285011cb337f7e26a529981}} 
+\index{assign02.c@{assign02.c}!asm\_gpio\_get@{asm\_gpio\_get}}
+\index{asm\_gpio\_get@{asm\_gpio\_get}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{asm\_gpio\_get()}{asm\_gpio\_get()}}
+{\footnotesize\ttfamily bool asm\+\_\+gpio\+\_\+get (\begin{DoxyParamCaption}\item[{uint}]{pin }\end{DoxyParamCaption})}
+
+
+
+Get the value of a GPIO pin – see SDK for detail on gpio\+\_\+get() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{assign02_8c_a2ae745b837daccfde599878d9e87f75b}\label{assign02_8c_a2ae745b837daccfde599878d9e87f75b}} 
+\index{assign02.c@{assign02.c}!asm\_gpio\_init@{asm\_gpio\_init}}
+\index{asm\_gpio\_init@{asm\_gpio\_init}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{asm\_gpio\_init()}{asm\_gpio\_init()}}
+{\footnotesize\ttfamily void asm\+\_\+gpio\+\_\+init (\begin{DoxyParamCaption}\item[{uint}]{pin }\end{DoxyParamCaption})}
+
+
+
+Initialise a GPIO pin – see SDK for detail on gpio\+\_\+init() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{assign02_8c_a9f03814beac6af4dc59e52c0212d19df}\label{assign02_8c_a9f03814beac6af4dc59e52c0212d19df}} 
+\index{assign02.c@{assign02.c}!asm\_gpio\_put@{asm\_gpio\_put}}
+\index{asm\_gpio\_put@{asm\_gpio\_put}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{asm\_gpio\_put()}{asm\_gpio\_put()}}
+{\footnotesize\ttfamily void asm\+\_\+gpio\+\_\+put (\begin{DoxyParamCaption}\item[{uint}]{pin,  }\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Set the value of a GPIO pin – see SDK for detail on gpio\+\_\+put() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{assign02_8c_a30af7c9d96d0e068f2f24bfb182bcdf5}\label{assign02_8c_a30af7c9d96d0e068f2f24bfb182bcdf5}} 
+\index{assign02.c@{assign02.c}!asm\_gpio\_set\_dir@{asm\_gpio\_set\_dir}}
+\index{asm\_gpio\_set\_dir@{asm\_gpio\_set\_dir}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{asm\_gpio\_set\_dir()}{asm\_gpio\_set\_dir()}}
+{\footnotesize\ttfamily void asm\+\_\+gpio\+\_\+set\+\_\+dir (\begin{DoxyParamCaption}\item[{uint}]{pin,  }\item[{bool}]{out }\end{DoxyParamCaption})}
+
+
+
+Set direction of a GPIO pin – see SDK for detail on gpio\+\_\+set\+\_\+dir() 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & \\
+\hline
+{\em out} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{assign02_8c_aa64ec553a105b1c63a4e94bef7397873}\label{assign02_8c_aa64ec553a105b1c63a4e94bef7397873}} 
+\index{assign02.c@{assign02.c}!asm\_gpio\_set\_irq@{asm\_gpio\_set\_irq}}
+\index{asm\_gpio\_set\_irq@{asm\_gpio\_set\_irq}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{asm\_gpio\_set\_irq()}{asm\_gpio\_set\_irq()}}
+{\footnotesize\ttfamily void asm\+\_\+gpio\+\_\+set\+\_\+irq (\begin{DoxyParamCaption}\item[{uint}]{pin }\end{DoxyParamCaption})}
+
+
+
+Enable falling-\/edge interrupt – see SDK for detail on gpio\+\_\+set\+\_\+irq\+\_\+enabled() TODO change this, right now it resembles the behaviour of GPIO\+\_\+\+IRQ\+\_\+\+HIGH. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pin} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{assign02_8c_a677c57d98f0377cde54889e02d24bfa6}\label{assign02_8c_a677c57d98f0377cde54889e02d24bfa6}} 
+\index{assign02.c@{assign02.c}!check\_morse@{check\_morse}}
+\index{check\_morse@{check\_morse}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{check\_morse()}{check\_morse()}}
+{\footnotesize\ttfamily int check\+\_\+morse (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+check if the code stored in the buffer matches the code of the letter in the index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{assign02_8c_aff4bc17c602603d120756f52e18ebb96}\label{assign02_8c_aff4bc17c602603d120756f52e18ebb96}} 
+\index{assign02.c@{assign02.c}!clearscreen@{clearscreen}}
+\index{clearscreen@{clearscreen}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{clearscreen()}{clearscreen()}}
+{\footnotesize\ttfamily void clearscreen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to clear the console. 
+
+\mbox{\Hypertarget{assign02_8c_a9f153132b8b4afad133b952111e18bd9}\label{assign02_8c_a9f153132b8b4afad133b952111e18bd9}} 
+\index{assign02.c@{assign02.c}!core1\_entry@{core1\_entry}}
+\index{core1\_entry@{core1\_entry}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{core1\_entry()}{core1\_entry()}}
+{\footnotesize\ttfamily void core1\+\_\+entry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+set up code to run on core 1 
+
+\mbox{\Hypertarget{assign02_8c_a3d8246759a5fa01c68f943a14b07a5ef}\label{assign02_8c_a3d8246759a5fa01c68f943a14b07a5ef}} 
+\index{assign02.c@{assign02.c}!core\_1\_process@{core\_1\_process}}
+\index{core\_1\_process@{core\_1\_process}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{core\_1\_process()}{core\_1\_process()}}
+{\footnotesize\ttfamily int32\+\_\+t core\+\_\+1\+\_\+process (\begin{DoxyParamCaption}\item[{int32\+\_\+t}]{fico }\end{DoxyParamCaption})}
+
+
+
+Multicore function that runs the main program on the additional core. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fico} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int32\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{assign02_8c_aa98bf2bd02fee944e7c7b479bdf575e6}\label{assign02_8c_aa98bf2bd02fee944e7c7b479bdf575e6}} 
+\index{assign02.c@{assign02.c}!countDown@{countDown}}
+\index{countDown@{countDown}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{countDown()}{countDown()}}
+{\footnotesize\ttfamily void count\+Down (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{int}]{random\+Index,  }\item[{int}]{score,  }\item[{int}]{lives }\end{DoxyParamCaption})}
+
+
+
+printing a count down to let the player know that the game is about to begin 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & \\
+\hline
+{\em random\+Index} & \\
+\hline
+{\em score} & \\
+\hline
+{\em lives} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{assign02_8c_aae233a3259047179cf6b672119117bb2}\label{assign02_8c_aae233a3259047179cf6b672119117bb2}} 
+\index{assign02.c@{assign02.c}!get\_bits@{get\_bits}}
+\index{get\_bits@{get\_bits}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{get\_bits()}{get\_bits()}}
+{\footnotesize\ttfamily int $\ast$ get\+\_\+bits (\begin{DoxyParamCaption}\item[{int}]{buffer,  }\item[{int}]{number\+\_\+of\+\_\+bits }\end{DoxyParamCaption})}
+
+
+
+This function return the bits pointer and enables other parts of code to read the buffer information. 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{assign02_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{assign02_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{assign02.c@{assign02.c}!main@{main}}
+\index{main@{main}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{assign02_8c_a3d1a578e3c15224826e074685edbc7b4}\label{assign02_8c_a3d1a578e3c15224826e074685edbc7b4}} 
+\index{assign02.c@{assign02.c}!printCurrentLevel@{printCurrentLevel}}
+\index{printCurrentLevel@{printCurrentLevel}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{printCurrentLevel()}{printCurrentLevel()}}
+{\footnotesize\ttfamily void print\+Current\+Level (\begin{DoxyParamCaption}\item[{int}]{level,  }\item[{int}]{random\+Index,  }\item[{int}]{score,  }\item[{int}]{lives }\end{DoxyParamCaption})}
+
+
+
+function for each level printing output based on the user input 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & \\
+\hline
+{\em random\+Index} & \\
+\hline
+{\em score} & \\
+\hline
+{\em lives} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{assign02_8c_a45bca1ee5f91227778d6352e48d6719a}\label{assign02_8c_a45bca1ee5f91227778d6352e48d6719a}} 
+\index{assign02.c@{assign02.c}!reset\_buffer@{reset\_buffer}}
+\index{reset\_buffer@{reset\_buffer}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{reset\_buffer()}{reset\_buffer()}}
+{\footnotesize\ttfamily void reset\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Resets the current word buffer. 
+
+\mbox{\Hypertarget{assign02_8c_a1a6c77c32d7eaef6177f10a092bd5620}\label{assign02_8c_a1a6c77c32d7eaef6177f10a092bd5620}} 
+\index{assign02.c@{assign02.c}!returnInput@{returnInput}}
+\index{returnInput@{returnInput}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{returnInput()}{returnInput()}}
+{\footnotesize\ttfamily char return\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+funtion to reset the buffer and printing the output 
+
+\mbox{\Hypertarget{assign02_8c_ae59543400d4fd239731ff4d437524270}\label{assign02_8c_ae59543400d4fd239731ff4d437524270}} 
+\index{assign02.c@{assign02.c}!search\_morse@{search\_morse}}
+\index{search\_morse@{search\_morse}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{search\_morse()}{search\_morse()}}
+{\footnotesize\ttfamily char search\+\_\+morse (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Return the letter corresponding to the letter, else return ? 
+
+\begin{DoxyReturn}{Returns}
+char 
+\end{DoxyReturn}
+\mbox{\Hypertarget{assign02_8c_a8350519dbc9cd0d6345b02d09ffe4f14}\label{assign02_8c_a8350519dbc9cd0d6345b02d09ffe4f14}} 
+\index{assign02.c@{assign02.c}!task1@{task1}}
+\index{task1@{task1}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{task1()}{task1()}}
+{\footnotesize\ttfamily int task1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+implementation of task 1 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{assign02_8c_ac06840b5fb606b0965b4760d28b82094}\label{assign02_8c_ac06840b5fb606b0965b4760d28b82094}} 
+\index{assign02.c@{assign02.c}!task2@{task2}}
+\index{task2@{task2}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{task2()}{task2()}}
+{\footnotesize\ttfamily int task2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+implementation of task 2 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{assign02_8c_a3ae77238e329315921c679958019a26b}\label{assign02_8c_a3ae77238e329315921c679958019a26b}} 
+\index{assign02.c@{assign02.c}!task3@{task3}}
+\index{task3@{task3}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{task3()}{task3()}}
+{\footnotesize\ttfamily int task3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+implementation of task 3 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{assign02_8c_a599e67c9615b716b048e98f6ac94f389}\label{assign02_8c_a599e67c9615b716b048e98f6ac94f389}} 
+\index{assign02.c@{assign02.c}!task4@{task4}}
+\index{task4@{task4}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{task4()}{task4()}}
+{\footnotesize\ttfamily int task4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+implementation of task 4 
+
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{assign02_8c_a1983a60de73d6fac301ace1f66a7f303}\label{assign02_8c_a1983a60de73d6fac301ace1f66a7f303}} 
+\index{assign02.c@{assign02.c}!waitForSpace@{waitForSpace}}
+\index{waitForSpace@{waitForSpace}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{waitForSpace()}{waitForSpace()}}
+{\footnotesize\ttfamily void wait\+For\+Space (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the input is a space or not. 
+
+\begin{DoxyReturn}{Returns}
+char 
+\end{DoxyReturn}
+\mbox{\Hypertarget{assign02_8c_aa859b5c3d16fe1bed1d894ed26c63337}\label{assign02_8c_aa859b5c3d16fe1bed1d894ed26c63337}} 
+\index{assign02.c@{assign02.c}!welcomeMessage@{welcomeMessage}}
+\index{welcomeMessage@{welcomeMessage}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{welcomeMessage()}{welcomeMessage()}}
+{\footnotesize\ttfamily void welcome\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+welcome banner with group number and instructions 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{assign02_8c_a7f8c6ea9f5ed02326c2c091af3b225bf}\label{assign02_8c_a7f8c6ea9f5ed02326c2c091af3b225bf}} 
+\index{assign02.c@{assign02.c}!button\_buffer@{button\_buffer}}
+\index{button\_buffer@{button\_buffer}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{button\_buffer}{button\_buffer}}
+{\footnotesize\ttfamily int button\+\_\+buffer}
+
+\mbox{\Hypertarget{assign02_8c_ab44b37af4091430e7966b7087b2350b8}\label{assign02_8c_ab44b37af4091430e7966b7087b2350b8}} 
+\index{assign02.c@{assign02.c}!isSpace@{isSpace}}
+\index{isSpace@{isSpace}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{isSpace}{isSpace}}
+{\footnotesize\ttfamily int is\+Space}
+
+
+
+shared variable between asm and c code, stores the number of bits in the buffer 
+
+\mbox{\Hypertarget{assign02_8c_ac1d68ef9a5dd304c5015e07af7f2bb19}\label{assign02_8c_ac1d68ef9a5dd304c5015e07af7f2bb19}} 
+\index{assign02.c@{assign02.c}!lives@{lives}}
+\index{lives@{lives}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{lives}{lives}}
+{\footnotesize\ttfamily int lives}
+
+
+
+Store the previous state of button\+\_\+buffer. 
+
+\mbox{\Hypertarget{assign02_8c_a429313a357883005bafd05405df85e4e}\label{assign02_8c_a429313a357883005bafd05405df85e4e}} 
+\index{assign02.c@{assign02.c}!number\_of\_bits@{number\_of\_bits}}
+\index{number\_of\_bits@{number\_of\_bits}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{number\_of\_bits}{number\_of\_bits}}
+{\footnotesize\ttfamily int number\+\_\+of\+\_\+bits}
+
+
+
+shared variable between asm and c code, stores the morse code buffer 
+
+\mbox{\Hypertarget{assign02_8c_a034b3633bcf9859f3fb6b7ab7a334f6e}\label{assign02_8c_a034b3633bcf9859f3fb6b7ab7a334f6e}} 
+\index{assign02.c@{assign02.c}!prev@{prev}}
+\index{prev@{prev}!assign02.c@{assign02.c}}
+\doxysubsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily int prev}
+

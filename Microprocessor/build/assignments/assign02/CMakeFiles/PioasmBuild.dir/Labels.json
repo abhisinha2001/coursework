@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/abhinavsinha/pico/pico-apps/build/assignments/assign02/CMakeFiles/PioasmBuild"
+		},
+		{
+			"file" : "/Users/abhinavsinha/pico/pico-apps/build/assignments/assign02/CMakeFiles/PioasmBuild.rule"
+		},
+		{
+			"file" : "/Users/abhinavsinha/pico/pico-apps/build/assignments/assign02/CMakeFiles/PioasmBuild-complete.rule"
+		},
+		{
+			"file" : "/Users/abhinavsinha/pico/pico-apps/build/assignments/assign02/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule"
+		},
+		{
+			"file" : "/Users/abhinavsinha/pico/pico-apps/build/assignments/assign02/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule"
+		},
+		{
+			"file" : "/Users/abhinavsinha/pico/pico-apps/build/assignments/assign02/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule"
+		},
+		{
+			"file" : "/Users/abhinavsinha/pico/pico-apps/build/assignments/assign02/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule"
+		},
+		{
+			"file" : "/Users/abhinavsinha/pico/pico-apps/build/assignments/assign02/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule"
+		},
+		{
+			"file" : "/Users/abhinavsinha/pico/pico-apps/build/assignments/assign02/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule"
+		},
+		{
+			"file" : "/Users/abhinavsinha/pico/pico-apps/build/assignments/assign02/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"PioasmBuild"
+		],
+		"name" : "PioasmBuild"
+	}
+}
